@@ -1,0 +1,24 @@
+main {
+  min-height: 100vh;
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+h3, p {
+  margin: 0 !important;
+}
+
+#buttons-conainer {
+  margin: 1em 0 1em;
+}
+
+button {
+  transition: .3s !important;
+}
+
+button:hover {
+  letter-spacing: .1em;
+}
