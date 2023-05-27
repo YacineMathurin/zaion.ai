@@ -13,12 +13,10 @@ function heartbeat() {
 
 const interval = setInterval(function ping() {
   wss.clients.forEach(function each(ws) {
-    console.log(ws.isAlive);
     if (ws.isAlive === false) return ws.terminate();
 
     ws.isAlive = false;
     ws.ping();
-    console.log("Ping");
   });
 }, heartbeatInterval); 
 
