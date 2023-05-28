@@ -37,7 +37,7 @@ function main() {
   });
 
   // display received message for the client
-  client.addEventListener("message", function (event) {
+  client.addEventListener("message",  (event) => {
     document.getElementById("result-text").textContent = event.data;
   });
 
