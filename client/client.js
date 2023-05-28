@@ -3,12 +3,11 @@ const el2 = document.getElementById("document-2");
 const el3 = document.getElementById("document-3");
 const connectBtn = document.getElementById("connect");
 const disconnectBtn = document.getElementById("disconnect");
-let isConnected = false;
-
+ 
 // port to connect to
 const port = 3050;
 
-// connect on this button clicked
+// connect once this button is clicked
 connectBtn.addEventListener("click", main);
 
 // reset view and by the way handle button to make accessible
@@ -30,8 +29,7 @@ function main() {
   });
 
   client.addEventListener("open", () => {
-    isConnected = true;
-    el1.style.display = "inline-block";
+     el1.style.display = "inline-block";
     el2.style.display = "inline-block";
     el3.style.display = "inline-block";
     disconnectBtn.style.display = "inline-block";
@@ -44,12 +42,10 @@ function main() {
   });
 
   client.addEventListener("close", (event) => {
-
     // detect if the client closed the link or the server crashed or not responding
     const cleanClose = event.wasClean;
 
     reset();
-    clearTimeout(this.pingTimeout);
     connectBtn.style.display = "inline-block";
     document.getElementById("result-text").textContent = cleanClose
       ? "Connection closed"
@@ -69,7 +65,6 @@ function main() {
   });
 
   disconnectBtn.addEventListener("click", () => {
-    isConnected = false;
-    client.close();
+     client.close();
   });
 }
