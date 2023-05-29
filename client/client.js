@@ -5,7 +5,7 @@ const connectBtn = document.getElementById("connect");
 const disconnectBtn = document.getElementById("disconnect");
  
 // port to connect to
-const port = 3050;
+const port = 8080;
 
 // connect once this button is clicked
 connectBtn.addEventListener("click", main);
