@@ -10,7 +10,7 @@ To get the program working:
 
 - Clone the repository
 
-- Move to the server's repository and run `npm install` to install the dependencies then launch the server by running `npm start` or `npm run dev` for hot reloading when developing
+- Move to the server's repository and run `docker-compose up -d` to launch the proxy server as well as the websocket server 
 
 - Open the client web interface and interact with the server
 
